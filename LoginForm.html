@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - QY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss"></style>
+    <script src="../javascript/LoginFormScript.js" defer></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                jb: ['JetBrains Mono', 'monospace'],
+              },
+            },
+          },
+        }
+    </script>      
+</head>
+
+<body class="bg-slate-900 font-jb w-full">
+
+    <!-- menubar -->
+    <nav class="fixed top-0 left-0 right-0 bg-slate-950 text-blue-100 text-xl py-2 px-4 z-50">
+        <div class="flex justify-between items-center">
+          <div class="flex space-x-4 items-center">
+            <a href="#" class="p-2 hover:text-blue-200">Home</a>
+            <a href="#" class="p-2 hover:text-blue-200">About</a>
+            <a href="#" class="p-2 hover:text-blue-200">Contact</a>
+          </div>
+          <a href="#">
+            <img src="../img/pfp.png" alt="Profile picture" class="w-8 rounded-xl">
+          </a>
+        </div>
+    </nav>
+      
+    <!-- Log in form -->
+    <div class="login flex justify-center items-center min-h-screen">
+      <form action="" class="bg-slate-300 p-12 grid grid-cols-2 gap-4 rounded-lg w-full max-w-md shadow-slate-700 shadow-xl">
+        <label for="login-email" class="sr-only">Email</label>
+        <input type="email" id="login-email" placeholder="Email" class="col-span-2 p-2 rounded border border-gray-400 focus:shadow-lg">
+        
+        <label for="login-password" class="sr-only">Password</label>
+        <input type="password" id="login-password" placeholder="Password" class="col-span-2 p-2 rounded border border-gray-400 focus:shadow-lg">
+        
+        <button class="login-button bg-slate-700 hover:bg-opacity-75 hover:shadow-lg p-2 active:bg-opacity-80 active:shadow-xl p-2 rounded-xl text-white mt-5 col-span-2">LOGIN</button>
+        
+        <p class="text-slate-700 col-span-2 text-center mt-2">Don't have an account? 
+          <span id="to-signup" class="text-slate-800 hover:text-slate-500 cursor-pointer">Sign Up</span>
+        </p>
+      </form>
+    </div>
+    
+    
+    <!-- Sign up form -->
+    <div class="signup pt-20 flex justify-center items-center min-h-screen hidden">
+        <form action="" class="bg-slate-300 p-12 grid grid-cols-2 gap-4 rounded-lg w-full max-w-md shadow-slate-700 shadow-lg">
+            <input type="text" id="name" placeholder="Name" class="col-span-2 p-2 rounded border border-gray-400 focus:shadow-lg">
+            <input type="date" id="birthday" name="birthday" class="col-span-2 p-2 rounded border border-gray-400 focus:shadow-lg">
+            <input type="email" id="signup-email" placeholder="email" class="col-span-2 p-2 rounded border border-gray-400 focus:shadow-lg">
+            <input type="password" id="signup-password" placeholder="Password" class="col-span-2 p-2 rounded border border-gray-400 focus:shadow-lg">
+            <button class="signup-button bg-slate-700 hover:bg-opacity-75 hover:shadow-lg p-2 rounded-xl text-white mt-5 col-span-2">SIGN UP</button>
+            <p class="text-slate-700 col-span-2 text-center mt-2">Already have an account?
+              <span id="to-login" class="text-slate-800 hover:text-slate-500 cursor-pointer">log in</span>
+            </p>
+        </form>
+    </div>
+  
+</body>
+</html>
